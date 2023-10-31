@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+p {
+  color: rgb(32, 31, 31);
+  font-size: 20px;
+  font-weight: 400;
+}
+.geral {
+  width: 98vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.formulario_criar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.button-back {
+  height: 50px;
+  width: 50px;
+  max-height: 50px;
+  min-height: 10px;
+}
+.inputs {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 1%;
+}
+.inputs input {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px;
+  width: 400px;
+  height: 50px;
+}
+.inputs label {
+  width: 400px;
+}
+.entradas {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.entradas input {
+  width: 20%;
+}
+.bloco {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.bloco input {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+  outline: 0;
+}
+.input_1 {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+}
+.input_2 {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#metas {
+  display: none;
+}
+#Meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  height: 50px;
+}
+select {
+  outline: 0;
+  border: none;
+  width: 25%;
+  height: 5%;
+  border-radius: 4px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px;
+}
