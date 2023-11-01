@@ -8,7 +8,12 @@
   </head>
   <body>
     <div class="seta">
-      <img src="/assets/SETA.svg" class="button-back" />
+      <img
+        id="seta"
+        src="/assets/SETA.svg"
+        style="cursor: pointer"
+        class="button-back"
+      />
     </div>
     <div class="geral">
       <h1>Vamos gerar seu novo fluxo de caixa!</h1>
@@ -16,20 +21,20 @@
         <div class="inputs">
           <div class="input_1">
             <label>Data Inicial</label>
-            <input required="ola" type="date" />
+            <input required type="date" />
             <label>Data Final</label>
-            <input type="date" />
+            <input required type="date" />
           </div>
           <div class="input_2">
             <label>Saldo Inicial</label>
-            <input type="date" />
+            <input required type="date" />
             <label>Metas</label>
             <label for="metas" id="Meta"> Selecione seu arquivo </label>
-            <input id="metas" type="file" />
+            <input id="metas" name="metas" type="file" />
           </div>
         </div>
 
-        <select>
+        <select required>
           <option value="Mac">Mac</option>
           <option value="Filial">Filial</option>
           <option value="Fj">Fj</option>
@@ -40,28 +45,30 @@
         <div class="entradas">
           <div class="bloco">
             <label>Dinheiro</label>
-            <input type="number" />
+            <input required type="number" />
           </div>
           <div class="bloco">
             <label>Cielo C</label>
-            <input type="number" />
+            <input required type="number" />
           </div>
           <div class="bloco">
             <label>Cielo D</label>
-            <input type="number" />
+            <input required type="number" />
           </div>
           <div class="bloco">
             <label>Pix</label>
-            <input type="number" />
+            <input required type="number" />
           </div>
           <div class="bloco">
             <label>Alelo</label>
-            <input type="number" />
+            <input required type="number" />
           </div>
         </div>
 
-        <button type="submit">Criar Fluxo</button>
+        <button type="submit" id="enviar" name="enviar">Criar Fluxo</button>
       </form>
     </div>
+    <script src="/script/back_page.js"></script>
+    <script src="/script/arquivo.js"></script>
   </body>
 </html>

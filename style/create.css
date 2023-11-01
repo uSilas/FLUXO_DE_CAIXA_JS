@@ -143,7 +143,7 @@ select {
   padding: 5px;
 }
 button {
-  font-weight: 100;
+  font-weight: lighter;
   font-size: large;
 
   color: white;
