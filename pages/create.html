@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="/style/create.css" />
   </head>
   <body>
-    <img src="/assets/SETA.svg" class="button-back" />
-    
+    <div class="seta">
+      <img src="/assets/SETA.svg" class="button-back" />
+    </div>
     <div class="geral">
       <h1>Vamos gerar seu novo fluxo de caixa!</h1>
-      <div class="formulario_criar">
+      <form>
         <div class="inputs">
           <div class="input_1">
             <label>Data Inicial</label>
-            <input type="date" />
+            <input required="ola" type="date" />
             <label>Data Final</label>
             <input type="date" />
           </div>
@@ -27,7 +28,7 @@
             <input id="metas" type="file" />
           </div>
         </div>
-        
+
         <select>
           <option value="Mac">Mac</option>
           <option value="Filial">Filial</option>
@@ -58,8 +59,9 @@
             <input type="number" />
           </div>
         </div>
-      </div>
-      <button>Criar Fluxo</button>
+
+        <button type="submit">Criar Fluxo</button>
+      </form>
     </div>
   </body>
 </html>
