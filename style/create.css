@@ -196,12 +196,16 @@ button:hover {
   }
   h1 {
     font-size: 24px;
+    margin-bottom: 20px;
   }
   .inputs {
     margin-top: 10px;
   }
   #Meta {
     font-size: small;
+  }
+  .bloco label {
+    font-size: 10px;
   }
 }
 @media (max-width: 400px) {
