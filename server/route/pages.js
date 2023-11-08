@@ -1,17 +1,16 @@
-import express from "express";;
-
-const router = express.Router();;
+const express = require("express");
+const router = express.Router();
 
 router.get("/", (req, res) => {
-  s.render("pages/menu.html");
-;
+  res.render("pages/menu.html");
+});
+
 router.get("/create", (req, res) => {
-res.render("pages/create.html");
+  res.render("pages/create.html");
 });
 
 router.get("/publicar", (req, res) => {
-res.render("pages/publicar.html");
+  res.render("pages/publicar.html");
 });
 
-
-export default router
+module.exports = router;

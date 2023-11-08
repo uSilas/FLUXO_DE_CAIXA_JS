@@ -20,53 +20,56 @@
       <form>
         <div class="inputs">
           <div class="input_1">
-            <label>Data Inicial</label>
+            <label class="label_comum">Data Inicial</label>
             <input required type="date" />
-            <label>Data Final</label>
+            <label class="label_comum">Data Final</label>
             <input required type="date" />
           </div>
 
           <div class="input_2">
-            <label>Saldo Inicial</label>
+            <label class="label_comum">Saldo Inicial</label>
             <input required type="date" />
-            <label>Metas</label>
+            <label class="label_comum">Metas</label>
             <label for="metas" id="Meta"> Selecione seu arquivo </label>
             <input id="metas" name="metas" type="file" />
           </div>
         </div>
+        <div class="select">
+          <select required>
+            <option value="Mac">Mac</option>
+            <option value="Filial">Filial</option>
+            <option value="Fj">Fj</option>
+          </select>
+          <p
+            style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+          >
+            Preencha as porcentagens das entradas
+          </p>
+          <div class="entradas">
+            <div class="bloco">
+              <label>Dinheiro</label>
+              <input required type="number" />
+            </div>
+            <div class="bloco">
+              <label>Cielo C</label>
+              <input required type="number" />
+            </div>
+            <div class="bloco">
+              <label>Cielo D</label>
+              <input required type="number" />
+            </div>
+            <div class="bloco">
+              <label>Pix</label>
+              <input required type="number" />
+            </div>
+            <div class="bloco">
+              <label>Alelo</label>
+              <input required type="number" />
+            </div>
+          </div>
 
-        <select required>
-          <option value="Mac">Mac</option>
-          <option value="Filial">Filial</option>
-          <option value="Fj">Fj</option>
-        </select>
-        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
-          Preencha as porcentagens das entradas
-        </p>
-        <div class="entradas">
-          <div class="bloco">
-            <label>Dinheiro</label>
-            <input required type="number" />
-          </div>
-          <div class="bloco">
-            <label>Cielo C</label>
-            <input required type="number" />
-          </div>
-          <div class="bloco">
-            <label>Cielo D</label>
-            <input required type="number" />
-          </div>
-          <div class="bloco">
-            <label>Pix</label>
-            <input required type="number" />
-          </div>
-          <div class="bloco">
-            <label>Alelo</label>
-            <input required type="number" />
-          </div>
+          <button type="submit" id="enviar" name="enviar">Criar Fluxo</button>
         </div>
-
-        <button type="submit" id="enviar" name="enviar">Criar Fluxo</button>
       </form>
     </div>
     <script src="back_page.js"></script>

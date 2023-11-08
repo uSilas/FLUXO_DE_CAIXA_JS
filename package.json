@@ -1,25 +1,24 @@
 {
+  "type": "commonjs",
   "dependencies": {
     "cors": "^2.8.5",
-    "ejs": "^3.1.9",
+    "ejs": "^3.1.5",
     "express": "^4.18.2",
     "git": "^0.1.5",
-    "googleapis": "^128.0.0",
-    "lodash": "^4.17.21",
-    "nodemon": "^3.0.1",
+    "googleapis": "^67.1.0",
     "xlsx": "^0.18.5"
   },
   "name": "interface",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.mjs"
   },
   "author": "",
   "license": "ISC",
   "description": "��#\u0000 \u0000F\u0000L\u0000U\u0000X\u0000O\u0000_\u0000G\u0000U\u0000I\u0000A\u0000\r\u0000 \u0000#\u0000 \u0000F\u0000L\u0000U\u0000X\u0000O\u0000_\u0000G\u0000U\u0000I\u0000A\u0000\r\u0000 \u0000",
   "devDependencies": {
-    "path": "^0.12.7",
-    "url": "^0.11.3"
+    "nodemon": "^3.0.1"
   }
 }
