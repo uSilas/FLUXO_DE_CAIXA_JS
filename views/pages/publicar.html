@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publicar Fluxo</title>
-    <link rel="stylesheet" href="/style/publicar.css" />
+    <link rel="stylesheet" href="style/publicar.css" />
   </head>
   <body>
     <div class="seta">
@@ -19,17 +19,17 @@
       <h1>
         Agora envie as tabelas correspondentes para publica-las no Power Bi
       </h1>
-      <label id="entradas" for="entradas">Envie a tabela de entradas</label>
+      <label id="entrada" for="entradas">Envie a tabela de entradas</label>
       <input type="file" id="entradas" />
-      <label for="fluxo">Envie a tabela com o fluxo</label>
+      <label for="fluxo" id="label_fluxo">Envie a tabela com o fluxo</label>
       <input type="file" id="fluxo" />
-      <select>
+      <select required>
         <option value="MAC">MAC</option>
         <option value="FILIAL">FILIAL</option>
         <option value="FJ">FJ</option>
       </select>
-      <button>Publicar</button>
+      <button id="enviar">Publicar</button>
     </div>
-    <script src="/script/arquivo_publicar.js"></script>
+    <script src="arquivo_publicar.js"></script>
   </body>
 </html>

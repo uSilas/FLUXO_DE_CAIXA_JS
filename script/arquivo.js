@@ -1,4 +1,4 @@
-var fileUpload = document.getElementById("metas");
+var fileUpload = document.getElementById("entrada");
 var enviar = document.getElementById("enviar");
 var label = document.getElementById("Meta");
 enviar.addEventListener("click", function (event) {
