@@ -1,5 +1,3 @@
-const GoogleSheet = require("../infra/conect_sheet.js");
-
 class Sheet {
   constructor(googleSheets, auth, id_sheet) {
     this.googleSheets = googleSheets;
@@ -21,7 +19,7 @@ class Sheet {
 
       return { message: "ok" };
     } catch (error) {
-      return { error: error };
+      throw new Error(error);
     }
   }
 
@@ -47,22 +45,4 @@ class Sheet {
   }
 }
 
-/*
-GoogleSheet().then((d) => {
-  const Planilha = new Sheet(
-    d.googleSheets,
-    d.auth,
-    "1J1L5nSR0ffPCRovrTIEOWgGNWoNn6yMiKkoZ8rUtjeY"
-  );
-
-  Planilha.Clear("A1:Z1000")
-    .then((m) => {
-      console.log(m);
-      Planilha.Update("!A:B", [["Gabriel", ""]]);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-*/
+module.exports = Sheet;

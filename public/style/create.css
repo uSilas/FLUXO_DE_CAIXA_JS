@@ -182,8 +182,11 @@ button:hover {
   .inputs input {
     width: 70%;
   }
-  .inputs label {
-    width: 80%;
+  #Meta {
+    width: 70%;
+  }
+  .inputs .label_comum {
+    width: 70%;
   }
   .inputs {
     width: 70%;
