@@ -8,6 +8,8 @@ module.exports = {
     const data = req.body.data;
     const range = req.body.range;
 
+    console.log(req.body);
+
     if (!data || !id_sheet || !range) {
       return res
         .status(400)

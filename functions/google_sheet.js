@@ -29,7 +29,7 @@ class Sheet {
     const auth = this.auth;
 
     try {
-      await googleSheets.spreadsheets.values.append({
+      const response = await googleSheets.spreadsheets.values.append({
         auth,
         spreadsheetId,
         range: range,
@@ -38,9 +38,10 @@ class Sheet {
           values: data,
         },
       });
+
       return { message: "ok" };
     } catch (error) {
-      return { error: error };
+      throw new Error({ error: error });
     }
   }
 }

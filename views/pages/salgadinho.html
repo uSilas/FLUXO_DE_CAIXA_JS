@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/salgadinhos.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container_salgados">
+      <form id="form">
+        <div class="group-input">
+          <label for="n_salgado">Preço dos salgados</label>
+          <input name="n_salgado" id="n_salgado" />
+        </div>
+        <div class="group-input">
+          <label for="data_salgado">Data</label>
+          <input name="date" type="date" id="data_salgado" />
+        </div>
+        <div class="select_unidade">
+          <select name="unidade" id="select">
+            <option value="">Unidade</option>
+            <option value="1">MAC Matriz</option>
+            <option value="2">MAC Irauçuba</option>
+            <option value="3">MAC Cruzeiro</option>
+          </select>
+        </div>
+        <button type="submit" id="btn">Adicionar</button>
+      </form>
+    </div>
+
+    <script src="salgadinho.js"></script>
+  </body>
+</html>

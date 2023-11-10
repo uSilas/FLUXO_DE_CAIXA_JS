@@ -7,3 +7,8 @@ criar.addEventListener("click", function (e) {
 publicar.addEventListener("click", function (e) {
   window.location.href = "publicar";
 });
+
+//navigate salgados
+function SalgadosNavigate() {
+  window.location.href = "salgadinho";
+}

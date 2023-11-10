@@ -7,7 +7,7 @@ module.exports = {
       const conexao = await GoogleSheet();
       const Planilha = new S(conexao.googleSheets, conexao.auth, id_sheet);
 
-      await Planilha.Clear(range);
+      // await Planilha.Clear(range);
       await Planilha.Update(range, data);
 
       return { message: "ok" };

@@ -21,24 +21,23 @@
         <div class="inputs">
           <div class="input_1">
             <label class="label_comum">Data Inicial</label>
-            <input required type="date" />
+            <input required id="data_inicial" type="date" class="data" />
             <label class="label_comum">Data Final</label>
-            <input required type="date" />
+            <input required id="data_final" type="date" class="data" />
           </div>
 
           <div class="input_2">
             <label class="label_comum">Saldo Inicial</label>
-            <input required type="date" />
+            <input required type="number" placeholder="EX: 1500" />
             <label class="label_comum">Metas</label>
             <label for="metas" id="Meta"> Selecione seu arquivo </label>
             <input id="metas" name="metas" type="file" />
           </div>
         </div>
         <div class="select">
-          <select required>
+          <select required id="selecionar">
             <option value="Mac">Mac</option>
             <option value="Filial">Filial</option>
-            <option value="Fj">Fj</option>
           </select>
           <p
             style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
@@ -63,8 +62,8 @@
               <input required type="number" />
             </div>
             <div class="bloco">
-              <label>Alelo</label>
-              <input required type="number" />
+              <label id="alelo_label">Alelo</label>
+              <input id="alelo" required type="number" />
             </div>
           </div>
 

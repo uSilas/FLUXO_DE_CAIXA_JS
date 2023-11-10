@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  --bg-color: #ec4f4f;
+  --font-color: #ffffff;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container_salgados form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  padding: 30px;
+}
+
+.select_unidade select {
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+button {
+  padding: 15px;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border: none;
+  cursor: pointer;
+}
+
+label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9rem;
+}
+
+option {
+  font-size: 0.8rem;
+  padding: 5px;
+  margin-bottom: 3px;
+}
+
+.group-input,
+.group-input input {
+  width: 100%;
+  outline: 0;
+}
+
+.group-input input {
+  border: 1px solid #6b6b6b;
+  padding: 15px;
+}
