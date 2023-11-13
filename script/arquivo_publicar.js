@@ -4,6 +4,8 @@ var fluxo = document.getElementById("fluxo");
 var enviar = document.getElementById("enviar");
 var label = document.getElementById("entrada");
 var labelfluxo = document.getElementById("label_fluxo");
+import { get_tabelaData } from "./extrair_dados_xlsx.mjs";
+
 enviar.addEventListener("click", function (event) {
   if (ENTRADAS.files.length == 0 || fluxo.files.length == 0) {
     alert("Nenhum Arquivo Selecionado");
@@ -34,3 +36,5 @@ fluxo.addEventListener("change", function (e) {
 voltar.addEventListener("click", function (e) {
   window.location.href = "/";
 });
+
+get_tabelaData("01-11-2023", "10-11-2023", entradas);

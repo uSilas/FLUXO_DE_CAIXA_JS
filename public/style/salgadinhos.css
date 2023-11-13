@@ -15,6 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
 }
 
 .container_salgados form {
@@ -58,4 +59,10 @@ option {
 .group-input input {
   border: 1px solid #6b6b6b;
   padding: 15px;
+}
+
+#img {
+  position: absolute;
+  top: 45px;
+  left: 20px;
 }

@@ -1,5 +1,6 @@
 import { getDataXlsx } from "./extrair_dados_xlsx.mjs";
 import { get_data } from "./get_entradas.mjs";
+import { get_tabelaData } from "./get_entradas.mjs";
 
 var fileUpload = document.getElementById("metas");
 var enviar = document.getElementById("enviar");
@@ -54,5 +55,7 @@ $file_meta.addEventListener("change", async (e) => {
   const file = $file_meta.files[0];
 
   const entradas = await getDataXlsx(file);
+  const tabela_nova = get_tabelaData("01-11-2023", "10-11-2023", entradas);
+  console.log(tabela_nova);
   console.log(entradas);
 });
