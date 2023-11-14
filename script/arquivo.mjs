@@ -53,9 +53,18 @@ const $file_meta = document.getElementById("metas");
 
 $file_meta.addEventListener("change", async (e) => {
   const file = $file_meta.files[0];
-
+  const primeira_data = document.getElementById("data_inicial").value;
+  document.getElementById("data_inicial").stepDown(1);
+  let data_inicial = document.getElementById("data_inicial").value;
+  const data_final = document.getElementById("data_final").value;
+  document.getElementById("data_inicial").value = primeira_data;
+  data_inicial = data_inicial.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+  data_inicial = data_inicial.replace(/(\d*)-(\d*)-(\d*).*/, "$3-$2-$1");
   const entradas = await getDataXlsx(file);
-  const tabela_nova = get_tabelaData("01-11-2023", "10-11-2023", entradas);
+  const tabela_nova = get_tabelaData(data_inicial, data_final, entradas);
   console.log(tabela_nova);
   console.log(entradas);
 });

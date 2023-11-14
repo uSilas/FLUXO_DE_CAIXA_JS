@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 16px;
 }
@@ -23,12 +24,16 @@ body {
   flex-direction: column;
   gap: 20px;
   max-width: 400px;
+  min-width: 350px;
   padding: 30px;
+  width: 90%;
 }
 
 .select_unidade select {
   padding: 10px;
   font-size: 0.8rem;
+  color: black;
+  outline: 0;
 }
 
 button {
@@ -50,19 +55,22 @@ option {
   margin-bottom: 3px;
 }
 
-.group-input,
-.group-input input {
+.group-input {
   width: 100%;
-  outline: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .group-input input {
   border: 1px solid #6b6b6b;
   padding: 15px;
+  width: 100%;
+  outline: 0;
+  color: black;
 }
 
 #img {
   position: absolute;
   top: 45px;
-  left: 20px;
+  left: 15px;
 }

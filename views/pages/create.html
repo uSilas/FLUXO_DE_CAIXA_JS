@@ -21,7 +21,13 @@
         <div class="inputs">
           <div class="input_1">
             <label class="label_comum">Data Inicial</label>
-            <input required id="data_inicial" type="date" class="data" />
+            <input
+              required
+              id="data_inicial"
+              type="date"
+              class="data"
+              pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+            />
             <label class="label_comum">Data Final</label>
             <input required id="data_final" type="date" class="data" />
           </div>
