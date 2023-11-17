@@ -24,20 +24,18 @@ export function get_entradas(
   diffDias
 ) {
   var entradas = [["forma de pagamento", "valor", "data"]];
-
-  for (var i = 0; i < diffDias; i++) {
-    var entradaDia = [];
-
+  console.log(porcentagem.length);
+  for (var i = 1; i <= diffDias + 1; i++) {
     for (var z = 0; z < porcentagem.length; z++) {
-      entradaDia.push([
+      var entradaDia = [];
+      entradaDia.push(
         porcentagem_nomes[z],
-        dadosFiltrados[i - 1] * porcentagem[z],
-        dadosFiltrados[i][i],
-      ]);
+        dadosFiltrados[i - 1][1] * (porcentagem[z] / 100),
+        dadosFiltrados[i][0]
+      );
+      entradas.push(entradaDia);
     }
-
-    entradas.push(entradaDia);
   }
 
-  console.log(entradas);
+  return entradas;
 }

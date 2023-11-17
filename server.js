@@ -6,6 +6,7 @@ const app = express();
 
 const router = require("./server/route/pages.js");
 const router_sheet = require("./server/route/sheet.js");
+const router_despesas = require("./server/route/despesas.js");
 
 app.use(express.static("public"));
 app.use(express.static("functions"));
@@ -22,6 +23,7 @@ app.engine("html", ejs.renderFile);
 
 app.use("/", router);
 app.use("/", router_sheet);
+app.use("/", router_despesas);
 
 app.listen(3000, () => {
   console.log("conectado na porta 3000");

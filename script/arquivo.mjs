@@ -2,6 +2,8 @@ import { getDataXlsx } from "./extrair_dados_xlsx.mjs";
 import { get_data } from "./get_entradas.mjs";
 import { get_tabelaData } from "./get_entradas.mjs";
 import { get_entradas } from "./get_entradas.mjs";
+import { to_Excel } from "./parse_to_excel.mjs";
+
 var fileUpload = document.getElementById("metas");
 var enviar = document.getElementById("enviar");
 var label = document.getElementById("Meta");
@@ -13,6 +15,7 @@ select.addEventListener("change", (e) => {
   if (select.value == "Filial") {
     alelo.style.display = "none";
     alelo_label.style.display = "none";
+    alelo.value = 0;
   } else {
     alelo.style.display = "block";
     alelo_label.style.display = "block";
@@ -87,8 +90,23 @@ enviar.addEventListener("click", async function (event) {
   });
   console.log(porcentagens);
   console.log(nome);
-  var tabela_entradas = get_entradas(porcentagens, nome, tabela_nova, DiffDias);
-  console.log(tabela_entradas);
+  if ((select.value = "Mac")) {
+    var tabela_entradas = get_entradas(
+      porcentagens,
+      nome,
+      tabela_nova,
+      DiffDias
+    );
+    to_Excel(tabela_entradas, "FORMA DE RECEBIMENTO_MAC");
+  } else if ((select.value = "Filial")) {
+    var tabela_entradas = get_entradas(
+      porcentagens,
+      nome,
+      tabela_nova,
+      DiffDias
+    );
+    to_Excel(tabela_entradas, "FORMA DE RECEBIMENTO_FILIAL");
+  }
   ///////////
 });
 
