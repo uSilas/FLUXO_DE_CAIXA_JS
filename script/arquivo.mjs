@@ -3,13 +3,14 @@ import { get_data } from "./get_entradas.mjs";
 import { get_tabelaData } from "./get_entradas.mjs";
 import { get_entradas } from "./get_entradas.mjs";
 import { to_Excel } from "./parse_to_excel.mjs";
-
+//import { get_fluxo } from "./get_fluxo.mjs";
 var fileUpload = document.getElementById("metas");
 var enviar = document.getElementById("enviar");
 var label = document.getElementById("Meta");
 var select = document.getElementById("selecionar");
 var alelo = document.getElementById("alelo");
 var alelo_label = document.getElementById("alelo_label");
+var saldo_inicial = document.getElementById("saldo_inicial").value;
 
 select.addEventListener("change", (e) => {
   if (select.value == "Filial") {
@@ -107,6 +108,7 @@ enviar.addEventListener("click", async function (event) {
     );
     to_Excel(tabela_entradas, "FORMA DE RECEBIMENTO_FILIAL");
   }
+  //var fluxo = get_fluxo(tabela_entradas, DiffDias, saldo_inicial);
   ///////////
 });
 

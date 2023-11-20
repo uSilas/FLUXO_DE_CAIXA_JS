@@ -11,18 +11,16 @@ module.exports = {
             ON Unidades.Código = BI_SHOPPINGPAES2.UnidadeID
             AND BI_SHOPPINGPAES2.UnidadeID = ${unidade}
             WHERE CAST(BI_SHOPPINGPAES2.DataDeVencimento as date) 
-            BETWEEN CAST(${data_inicial} as date) AND CAST(${data_final} AS date)
+            BETWEEN CAST('${data_inicial}' AS date) AND CAST('${data_final}' AS date)
             AND BI_SHOPPINGPAES2.FormaDePagamento <> 'CIELC C'
             AND BI_SHOPPINGPAES2.FormaDePagamento <> 'CASS'
             AND BI_SHOPPINGPAES2.FormaDePagamento <> 'CASS'
-            
             AND BI_SHOPPINGPAES2.Histórico3 <> 'VENDAS'
             AND BI_SHOPPINGPAES2.Histórico3 <> 'Transferência'
             AND BI_SHOPPINGPAES2.Histórico3 <> 'TAXA DE CARTOES'
             ORDER BY BI_SHOPPINGPAES2.DataDeVencimento DESC
       `
       );
-
       return datas;
     } catch (error) {
       throw new Error(error);

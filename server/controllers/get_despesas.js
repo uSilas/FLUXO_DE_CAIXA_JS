@@ -9,15 +9,6 @@ module.exports = {
     let data_final = req.query.finalDate;
 
     try {
-      if (
-        !Middleware_date.isValid(data_inicial) ||
-        !Middleware_date.isValid(data_final)
-      ) {
-        throw new Error(
-          "Data inválida, verifique os valores. Precisa estar no formato BR e apresentar -"
-        );
-      }
-
       let data_incialUS = Middleware_date.To_USdate(data_inicial);
       let data_finalUS = Middleware_date.To_USdate(data_final);
 
