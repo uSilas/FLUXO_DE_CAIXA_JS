@@ -14,7 +14,7 @@ module.exports = {
             BETWEEN CAST('${data_inicial}' AS date) AND CAST('${data_final}' AS date)
             AND BI_SHOPPINGPAES2.FormaDePagamento <> 'CIELC C'
             AND BI_SHOPPINGPAES2.FormaDePagamento <> 'CASS'
-            AND BI_SHOPPINGPAES2.FormaDePagamento <> 'CASS'
+            
             AND BI_SHOPPINGPAES2.Histórico3 <> 'VENDAS'
             AND BI_SHOPPINGPAES2.Histórico3 <> 'Transferência'
             AND BI_SHOPPINGPAES2.Histórico3 <> 'TAXA DE CARTOES'

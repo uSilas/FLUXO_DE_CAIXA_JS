@@ -20,6 +20,7 @@ module.exports = {
 
       return res.status(200).json({ data: data });
     } catch (error) {
+      console.log(error);
       res.status(406).json({ message: error });
     }
   },

@@ -1,3 +1,4 @@
+import { get_despesas } from "./get_despesas.mjs";
 import { getDataXlsx } from "./extrair_dados_xlsx.mjs";
 import { get_data } from "./get_entradas.mjs";
 import { get_tabelaData } from "./get_entradas.mjs";
@@ -68,6 +69,7 @@ enviar.addEventListener("click", async function (event) {
   ////////////////////////////////////////
 
   //agora vamos pegar a tabela de entradas//
+  primeira_data = primeira_data.replace(/(\d*)-(\d*)-(\d*).*/, "$3-$2-$1");
   data_inicial = data_inicial.replace(/(\d*)-(\d*)-(\d*).*/, "$3-$2-$1");
   data_final = data_final.replace(/(\d*)-(\d*)-(\d*).*/, "$3-$2-$1");
   console.log(data_inicial, data_final);
@@ -108,8 +110,29 @@ enviar.addEventListener("click", async function (event) {
     );
     to_Excel(tabela_entradas, "FORMA DE RECEBIMENTO_FILIAL");
   }
-  //var fluxo = get_fluxo(tabela_entradas, DiffDias, saldo_inicial);
-  ///////////
+
+  //AGORA VAMOS PEGAR O FLUXO
+  var despesas = fetch(
+    `https://9589-170-82-230-7.ngrok-free.app/despesas/1?initialDate=${primeira_data}&finalDate=${data_final}`
+  )
+    .then((response) => {
+      // Verifique se a solicitação foi bem-sucedida (status 200)
+      if (!response.ok) {
+        throw new Error(`Erro na solicitação: ${response.statusText}`);
+      }
+      // Retorna a Promise do corpo da resposta parseado como JSON
+      return response.json();
+    })
+    .then((data) => {
+      // Faça algo com os dados JSON
+      console.log(data);
+      return data;
+    })
+    .catch((error) => {
+      console.error("Erro:", error);
+    });
+  get_despesas(despesas, DiffDias, primeira_data, data_final);
+  //var fluxo = get_fluxo(tabela_entradas, DiffDias, saldo_inicial, despesas);
 });
 
 fileUpload.addEventListener("change", function (e) {
