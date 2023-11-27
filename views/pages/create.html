@@ -47,8 +47,8 @@
         </div>
         <div class="select">
           <select required id="selecionar">
-            <option value="Mac">Mac</option>
-            <option value="Filial">Filial</option>
+            <option value="1">Mac</option>
+            <option value="2">Filial</option>
           </select>
           <p
             style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
@@ -73,6 +73,10 @@
               <input required type="number" class="input_nome" />
             </div>
             <div class="bloco">
+              <label class="label_nome">FJ</label>
+              <input required type="number" class="input_nome" />
+            </div>
+            <div class="bloco">
               <label id="alelo_label" class="label_nome">Alelo</label>
               <input id="alelo" required type="number" class="input_nome" />
             </div>
@@ -84,6 +88,7 @@
     </div>
     <script src="back_page.js"></script>
     <script type="module" src="arquivo.mjs"></script>
+    <script src="./get_despesas.mjs" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
   </body>

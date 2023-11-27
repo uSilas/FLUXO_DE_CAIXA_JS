@@ -46,12 +46,14 @@ label {
   justify-content: center;
   align-items: center;
   font-family: fantasy;
+  cursor: pointer;
 }
 input {
   display: none;
 }
 select {
   color: #ec4f4f;
+  cursor: pointer;
   background-color: white;
   height: 60px;
   width: 300px;

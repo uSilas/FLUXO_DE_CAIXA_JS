@@ -1,3 +1,5 @@
+import { addDays, parse, format } from "https://cdn.skypack.dev/date-fns";
+
 export function get_data(data_inicial, data_final) {
   data_inicial = new Date(data_inicial);
   data_final = new Date(data_final);
@@ -33,9 +35,39 @@ export function get_entradas(
         dadosFiltrados[i - 1][1] * (porcentagem[z] / 100),
         dadosFiltrados[i][0]
       );
+
       entradas.push(entradaDia);
     }
   }
 
   return entradas;
+}
+export function get_entradasTotal(entradas, data_inicial, diffDias) {
+  var entradas_total = [["valor", "data"]];
+  console.log(data_inicial);
+  console.log(typeof data_inicial);
+  console.log(entradas);
+  for (var i = 1; i <= diffDias + 1; i++) {
+    var entradas_filtrado = entradas.filter((elemento, indice) => {
+      console.log(elemento);
+      if (elemento == ["forma de pagamento", "valor", "data"]) {
+        return false;
+      } else {
+        return elemento[2] == data_inicial;
+      }
+    });
+    var valor_do_dia = entradas_filtrado.reduce((late, current) => {
+      console.log(current[1]);
+      return late + current[1];
+    }, 0);
+    console.log(valor_do_dia);
+    console.log(entradas_filtrado);
+
+    entradas_total.push([valor_do_dia, entradas_filtrado[0][2]]);
+    data_inicial = parse(data_inicial, "dd-MM-yyyy", new Date());
+    data_inicial = addDays(data_inicial, 1);
+    console.log(typeof data_inicial);
+    data_inicial = format(data_inicial, "dd-MM-yyyy");
+  }
+  return entradas_total;
 }
